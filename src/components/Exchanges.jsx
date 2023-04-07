@@ -3,7 +3,6 @@ import axios from 'axios'
 import { server } from '../index'
 import { Container, Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
 import Loader from './Loader';
-import Error from './ErrorComponent';
 import ErrorComponent from './ErrorComponent';
 
 const Exchanges = () => {
@@ -30,7 +29,7 @@ const Exchanges = () => {
     return <Container maxW={"container.xl"}>
         {loading ? <Loader /> : <>
 
-            <HStack wrap={"wrap"}>
+            <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
                 {exchanges.map(i => (
                     <ExchangeCard
                         key={i.id}
